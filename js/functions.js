@@ -19,15 +19,17 @@ function getStringLenght2(string, lengthString) {
 
 
 function checkIsPalindrome(string) {
+  const polindromeString = string.toLowerCase().replaceAll(' ', '');
   let newString = '';
 
-  for(let i = string.length - 1; i >= 0; i--) {
-    newString += string[i];
+  for(let i = polindromeString.length - 1; i >= 0; i--) {
+    newString += polindromeString[i];
   }
 
-  return newString.toLocaleLowerCase() === string.toLocaleLowerCase();
+  return newString === polindromeString;
 
 }
 
 // console.log(checkIsPalindrome('Топот'));
 // console.log(checkIsPalindrome('Кекс'));
+console.log(checkIsPalindrome('А роза упала на лапу Азора'));
